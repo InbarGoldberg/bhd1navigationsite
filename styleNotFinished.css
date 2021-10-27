@@ -1,0 +1,109 @@
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-Regular.ttf");
+}
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-Bold.ttf");
+    font-weight: bold;
+}
+  
+* {
+    direction: rtl;
+    font-family: assistant;
+    user-select: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('media/bg.png') center top no-repeat fixed;
+    background-size: cover;
+    color: rgb(63, 58, 58);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#nav {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1030;
+    padding: 0.5rem;
+    background-color: #f4c330;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+#logo {
+    position: absolute;
+    right: 0.5rem;
+    
+}
+
+#logo:hover {
+    animation: rubberBand 0.5s ease-in-out;
+}
+
+#logo > img {
+    height: 6rem;
+    filter: sepia(25%);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.slide {
+    width: 100vw;
+    padding-top: 4rem;
+    height: inherit;
+}
+
+#slide0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    width: 75vw;
+    padding: 5rem 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+    animation: bounceInDown 1s;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mov-btns {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    z-index: 1030;
+}
+
+a {
+    text-decoration: none !important;
+    color: whitesmoke !important;
+}
+
+.prv-btn {
+    padding: 0.25rem 0.5rem;
+    background-color: rgb(63, 58, 58);
+    border-radius: 0.25rem;
+}

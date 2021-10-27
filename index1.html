@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/jquery.ui.touch-punch.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style1.css" />
+    <script src="code1.js"></script>
+
+    <title>לומדת קריאת מפה</title>
+</head>
+
+<body>
+
+    <!-- navbar ///////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div id="menu-close"></div>
+    <nav id="nav">
+        <div>
+            <a href="indexHome.html">
+                <img id="logo" src="media/bhd1Home.png" />
+            </a>
+            <div id="chapter-ttl"> מרכיבי המפה </div>
+        </div>
+
+        <div id="menu-btn" class="navbar-toggler-icon"></div>
+
+        <div id="content">
+            <div id="menu">
+                <div class="menu-chapter">
+                    <div class="menu-chapter-ttl menu-active" id="0"> מרכיבי המפה </div>
+                    <div class="menu-chapter-sub-ttl" id="1"> רשת הקואורדינטות </div>
+                    <div class="menu-chapter-sub-ttl" id="5"> תבליט </div>
+                    <div class="menu-chapter-sub-ttl" id="7"> תכסית </div>
+                </div>
+                <div class="menu-chapter">
+                    <div class="menu-chapter-ttl" id="9"> מד הקואורדינטות </div>
+                    <div class="menu-chapter-sub-ttl" id="10"> הכרת מד הקואורדינטות </div>
+                    <div class="menu-chapter-sub-ttl" id="11"> מציאת נ.צ. </div>
+                    <div class="menu-chapter-sub-ttl" id="15"> מדידת אזימוט </div>
+                    <div class="menu-chapter-sub-ttl" id="21"> מדידת מרחקים </div>
+                </div>
+                <div class="menu-chapter">
+                    <div class="menu-chapter-ttl" id="25"> סוגי מפות </div>
+                    <div class="menu-chapter-sub-ttl" id="26"> מפה לבנה </div>
+                    <div class="menu-chapter-sub-ttl" id="27"> מפת תצ"א </div>
+                    <div class="menu-chapter-sub-ttl" id="28"> מפת אורטופוטו </div>
+                    <div class="menu-chapter-sub-ttl" id="29"> מפת קוד / שליטה </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Slides chapter-1 /////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide0">
+        <div class="intro">
+            ברוכים הבאים לפרק מרכיבי המפה. <br />
+            החלק הבסיסי והקריטי ביותר לניווטים. <br /><br />
+            בפרק זה נלמד על שלושת המרכיבים העיקריים של המפה:
+            <ul>
+                <li> רשת קואורדינטות </li>
+                <li> תבליט </li>
+                <li> תכסית </li>
+            </ul>
+            <div class="mov-btns">
+                <div class="nxt-btn" id="nxt-btn0"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide1">
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p1">
+            רשת הקואורדינטות מחלקת את המפה למשבצות שוות. הרשת מורכבת <b> מקווי אורך וקווי רוחב. </b>
+        </p>
+
+        <img class="content-img" id="content-img1" src="media1/img1.jpeg" />
+        <div class="content-div" id="content-div1">
+            <div class="img-div" id="img-div1">
+                <div class="coords" id="coords1">
+                    <table class="content-table">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>646</span>
+                        <span>645</span>
+                        <span>644</span>
+                        <span>643</span>
+                        <span>642</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>215</span>
+                        <span>214</span>
+                        <span>213</span>
+                        <span>212</span>
+                        <span>211</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn1"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn1"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide2">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl2">אז, מה השימושים של רשת
+            הקואורדינטות? </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p2">
+            <b>תלחצו על הנקודות בשביל לגלות.</b>
+        </p>
+
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl2-a"> 1. איתור נקודות על המפה
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p2-a">
+            כל משבצת במפה תצוין לפי קווי האורך והרוחב של הפינה השמאלית התחתונה של המשבצת בה היא נמצאת.
+        </p>
+
+        <img class="content-img" id="content-img2" src="media1/img1.jpeg" />
+        <div class="content-div" id="content-div2">
+            <div class="img-div" id="img-div2">
+                <div class="coords" id="coords2">
+                    <table class="content-table" id="content-table2">
+                        <tr>
+                            <td></td>
+                            <td><img class="tap" id="tap2-a" src="media/tap.png" /></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><img class="tap" id="tap2" src="media/tap.png" />
+                                <div class="dot" id="dot2"></div>
+                            </td>
+                            <td><img class="circles" id="circles2" src="media/circles.png" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="dot-coords" id="dot-coords2"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>646</span>
+                        <span>645</span>
+                        <span>644</span>
+                        <span>643</span>
+                        <span>642</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>215</span>
+                        <span>214</span>
+                        <span>213</span>
+                        <span>212</span>
+                        <span>211</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn2"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn2"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide3">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl3"> 2. מדידת מרחקים </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p3">
+            רב המפות הטופוגרפיות הן בקנה מידה של 1:50,000 כלומר כל ס"מ במפה מייצג 50,000 ס"מ (500 מ') בשטח וכל משבצת היא
+            בגודל 2 ס"מ.
+        </p>
+
+        <img class="content-img" id="content-img3" src="media1/img1.jpeg" />
+        <div class="content-div" id="content-div3">
+            <div class="img-div" id="img-div3">
+                <div class="coords" id="coords3">
+                    <table class="content-table" id="content-table3">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><span class="km-txt" id="km-txt-y"> 1 ק"מ </span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><span class="km-txt" id="km-txt-x"> 1 ק"מ </span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><img class="tap" id="tap3" src="media/tap.png" /></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>646</span>
+                        <span>645</span>
+                        <span>644</span>
+                        <span>643</span>
+                        <span>642</span>
+                    </div>
+                    <div class="hor-coord" id="hor-coord3">
+                        <span>215</span>
+                        <span>214</span>
+                        <span>213</span>
+                        <span>212</span>
+                        <span>211</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns" id="mov-btns3">
+                <div class="prv-btn" id="prv-btn3"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn3"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide4">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl4"> 3. הערכת כיוונים </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p4">
+            מפה תמיד תהיה מוצפנת, הטקסט שעל גבי המפה ומספרי הקואורדינטות מיושרים לפי הצפון.
+        </p>
+
+        <img class="content-img" id="content-img4" src="media1/img1.jpeg" />
+        <div class="content-div" id="content-div4">
+            <div class="img-div" id="img-div4">
+                <div class="coords" id="coords4">
+                    <table class="content-table" id="content-table4">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord" id="ver-coord4">
+                        <span>646</span>
+                        <span>645</span>
+                        <span>644</span>
+                        <span>643</span>
+                        <span>642</span>
+                    </div>
+                    <div class="hor-coord" id="hor-coord4">
+                        <span>215</span>
+                        <span>214</span>
+                        <span>213</span>
+                        <span>212</span>
+                        <span>211</span>
+                    </div>
+                </div>
+                <img class="north" id="north4" src="media1/north.png" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn4"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn4"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide5">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl5"> מה זה תבליט? </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p5">
+            התבליט מתאר את השטח בתלת-ממד באמצעות קווים (קווי גובה) ונועד לזהות את צורות השטח במפה.
+            <br />
+        </p>
+        <ul class="animate__animated animate__fadeInRight first-p first-ul" id="first-ul5">
+            <li> הכיוון אליו פונות ספרות קווי הגובה הוא בכיוון העלייה. </li>
+            <li> הבדל הגבהים בין קו לקו הוא 10 מ'. </li>
+            <li> כל 100 מ' יסומן קו הגובה כקו עבה, שנקרא קו אינדקס. </li>
+        </ul>
+
+        <div class="content-div" id="content-div5">
+            <div class="img-div" id="img-div5">
+                <img class="content-img" id="content-img5" src="media1/terrain.png" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn5"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn5"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide6">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl6"> עברו בין המושגים הבאים כדי
+            ללמוד עליהם. </h5>
+        <div class="content-div" id="content-div6">
+            <table class="second-table" id="second-table6">
+                <tr>
+                    <td> גובה מוחלט</td>
+                    <td> גובה יחסי</td>
+                    <td> נקודות גובה </td>
+                    <td> נקודות טריג </td>
+                </tr>
+            </table>
+            <p class="second-p" id="second-p6">
+                גובה מוחלט נמדד מעל לפני הים (הים הוא נקודת האפס).
+                <br />
+                בדוגמא הגובה המוחלט של נקודה A הוא 120 מ'.
+            </p>
+
+            <div class="img-div" id="img-div6">
+                <img class="content-img" id="content-img6" src="media1/absoluteHeight.png" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn6"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn6"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide7">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl7"> מהי תכסית? </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p7">
+            קבוצת הסימנים המייצגת את כל פרטי הנוף(יישובים, צמחייה, כבישים, בתי כנסת ועוד) נקראת
+            תכסית.
+            <br />
+            <b> בתחתית המפה יש מקרא מפה לסימנים אלו. </b>
+        </p>
+
+        <div class="content-div" id="content-div7">
+            <div class="img-div" id="img-div7">
+                <img class="animate__animated animate__jackInTheBox content-img" id="content-img7"
+                    src="media1/legend.jpeg" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn7"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn7"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide8">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl8">
+            אלו הצבעים שהמפה מכילה עברו עליהם
+        </h5>
+        <div class="content-div" id="content-div8">
+            <table class="second-table" id="second-table8">
+                <tr>
+                    <td> חום </td>
+                    <td> כחול </td>
+                    <td> שחור </td>
+                    <td> ירוק </td>
+                </tr>
+            </table>
+            <p class="second-p" id="second-p8">
+                סימנים בצבע חום שייכים בדרך כלל <b> לקרקע, תבליט וצירים. </b>
+            </p>
+
+            <div class="img-div" id="img-div8">
+                <img class="content-img" id="content-img8" src="media1/brownOnMap.png" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn8"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn8"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Slides chapter-2 /////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide9">
+        <div class="intro">
+            ברוכים הבאים לפרק מד הקואורדינטות. <br />
+            מד הקואורדינטות הוא מה שמאפשר מדידת אזימוט (זוויות) ומרחקים. <br /><br />
+            בפרק זה נלמד על איך להשתמש במד הקואורדינטות:
+            <ul>
+                <li> הכרת מד הקואורדינטות </li>
+                <li> מציאת נ.צ. </li>
+                <li> מדידת אזימוט </li>
+                <li> מדידת מרחקים </li>
+            </ul>
+            <div class="mov-btns">
+                <div class="nxt-btn" id="nxt-btn9"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide10">
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p10">
+            בתמונה מד קואורדינטות או בקיצור מדקו.
+            <br />
+            <b> לחצו על המדקו לחשיפת המונחים </b>
+        </p>
+
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p10-a">
+            אלו כל החלקים במד הקואורדינטות אותם תלמדו בפרק זה.
+        </p>
+
+        <div class="content-div" id="content-div10">
+            <div class="img-div" id="img-div10">
+                <img class="animate__animated animate__jackInTheBox content-img" id="content-img10" />
+                <img class="content-img" id="content-img10-a" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn10"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn10"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide11">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl11"> מה זה נ.צ. ? </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p11">
+            נקודת ציון (נ.צ.) היא נקודה על גבי מפה שמציינת מיקום בשטח בעזרת קואורדינטות.
+            לדוגמא הנ.צ. של הנקודה האדומה בקילומטרים (גודל כל משבצת במפה הוא קילומטר רבוע) היא 758/249.
+        </p>
+
+        <img class="content-img" id="content-img11" src="media1/img2.jpg" />
+        <div class="content-div" id="content-div11">
+            <div class="img-div" id="img-div11">
+                <div class="coords" id="coords11">
+                    <table class="content-table" id="content-table11">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="dot" id="dot11"></div>
+                            </td>
+                            <td><img class="circles" id="circles11" src="media/circles.png" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="dot-coords" id="dot-coords11"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                    <div class="ver-coord">
+                        <span>759</span>
+                        <span>758</span>
+                        <span class="bold-coord">757</span>
+                        <span>756</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>250</span>
+                        <span>249</span>
+                        <span class="bold-coord">248</span>
+                        <span>247</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn11"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn11"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide12">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl12">
+            מציאת נ.צ. מדויק יותר
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p12">
+            נ.צ. בקילומטרים הוא לא מספיק מדויק, לציין שהנקודה המדוברת נמצאת איפשהו במשבצת
+            על המפה הוא תיאור כללי מדי.
+        </p>
+
+        <img class="content-img" id="content-img12" src="media1/img2.jpg" />
+        <div class="content-div" id="content-div12">
+            <div class="img-div" id="img-div12">
+                <div class="coords" id="coords12">
+                    <table class="content-table" id="content-table12">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="dot-square12">
+                                <div class="dot" id="dot12"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="dot-coords" id="dot-coords12"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>759</span>
+                        <span>758</span>
+                        <span>757</span>
+                        <span>756</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>250</span>
+                        <span>249</span>
+                        <span>248</span>
+                        <span>247</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn12"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn12"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide13" ontouchmove="drag13()">
+        <h5 class="first-ttl first-p" id="first-ttl13">
+            מציאת נ.צ. מדויק יותר
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p13">
+            יש פתרון לכך, בתחתית המדקו יש סרגל.
+            בגודל של משבצת ומחלקת אותה ב 10 כך שכל קו אורך או רוחב יציינו שינוי של 100 מ' במקום ק"מ אחד.
+        </p>
+        <b style="margin: 1rem 0;" class="animate__animated animate__fadeInRight centered-txt first-p">
+            גררו את המדקו אל הנקודה
+        </b>
+
+        <img class="content-img" id="content-img13" src="media1/img2.jpg" />
+        <div class="content-div" id="content-div13">
+            <div class="animate__animated animate__bounceIn pop-div" id="pop-div13">
+                הנ.צ. של הנקודה בדוגמא הוא 248700/757500
+                <br />
+                <b> חשוב שתזכרו שקודם רושמים את קו האורך ואז את קו הרוחב ! </b>
+            </div>
+            <img class="ui-widget-content coordinate-meter" id="coordinate-meter13" src="media1/coordinateMeter.jpeg">
+            <div class="img-div" id="img-div13">
+                <div class="coords" id="coords13">
+                    <table class="content-table" id="content-table13">
+                        <tr>
+                            <td></td>
+                            <td><img class="tap" id="tap13" src="media/tap.png" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="dot-square13">
+                                <div class="dot" id="dot13"></div>
+                            </td>
+                            <td><span class="dot-coord-num" id="dot-coord-hor"> 500 </span></td>
+                        </tr>
+                        <tr>
+                            <td> <span class="dot-coord-num" id="dot-coord-ver"> 700 </span> </td>
+                            <td>
+                                <div class="dot-coords" id="dot-coords13"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>759</span>
+                        <span>758</span>
+                        <span>757</span>
+                        <span>756</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>250</span>
+                        <span>249</span>
+                        <span>248</span>
+                        <span>247</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn13"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn13"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide14" ontouchmove="drag14()">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl14">
+            תרגול - מצאו את הנ.צ
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p14">
+            גררו את המדקו אל הנקודה
+        </p>
+
+        <img class="content-img" id="content-img14" src="media1/img2.jpg" />
+        <div class="content-div" id="content-div14">
+            <div class="animate__animated animate__bounceIn pop-div" id="pop-div14">
+                757300/הנ.צ. של הנקודה בדוגמא הוא 249500
+                <br />
+                <b> חשוב שתזכרו שקודם רושמים את קו האורך ואז את קו הרוחב ! </b>
+            </div>
+            <img class="ui-widget-content coordinate-meter" id="coordinate-meter14" src="media1/coordinateMeter.png">
+            <div class="img-div" id="img-div14">
+                <div class="coords" id="coords14">
+                    <table class="content-table" id="content-table14">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td id="dot-square14">
+                                <div class="dot" id="dot14"></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>759</span>
+                        <span>758</span>
+                        <span>757</span>
+                        <span>756</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>250</span>
+                        <span>249</span>
+                        <span>248</span>
+                        <span>247</span>
+                    </div>
+                </div>
+
+                <div class="input-group" id="input-group14">
+                    <div class="input-group-prepend">
+                        <a class="btn btn-info check-btn disabled" role="button" id="check-btn14" aria-disabled="true">
+                            בדיקה </a>
+                    </div>
+                    <input type="tel" class="form-control" id="check-input14" placeholder="">
+                </div>
+
+                <div class="animate__animated animate__bounceIn pop-div" id="pop-div14">
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn14"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn14"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide15">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl15">
+            שושנת הרוחות
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p15">
+            מראה את כיווני המצפן ואת הכיוונים שביניהם (כיווני ביניים).
+        </p>
+
+        <div class="content-div" id="content-div15">
+            <div class="img-div" id="img-div15">
+                <img class="animate__animated animate__jackInTheBox content-img" id="content-img15"
+                    src="media1/compassRose.png" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn15"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn15"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide16">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl16">
+            מה זה אזימוט ?
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p16">
+            הזווית שמודדים (בעזרת חוט) בין כיוון הצפון לכיוון המבוקש (מודדים עם כיוון השעון).
+        </p>
+
+        <div class="content-div" id="content-div16">
+            <div class="img-div" id="img-div16">
+                <img class="content-img" id="content-img16" src="media1/angle2.gif" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn16"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn16"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide17">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl17">
+            מדידת אזימוט יוצא
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p17">
+            אזימוט יוצא ימדד מהנווט למטרה (איך אני "רואה" את המטרה).
+            בדוגמא האזימוט היוצא הוא 320&deg;.
+        </p>
+        <p class="animate__animated animate__fadeInRight first-p bold"> את האזימוט החוזר רואים במעגל האמצעי (הכחול).
+        </p>
+
+        <img class="content-img" id="content-img17" src="media1/img1.jpeg" />
+        <div class="content-div" id="content-div17">
+            <div class="img-div" id="img-div17">
+                <div class="coords" id="coords17">
+                    <img class="coordinate-meter" id="coordinate-meter17" src="media1/coordinateMeterOut.png">
+                    <img class="string" id="string17" src="media1/string.png" />
+                    <table class="content-table" id="content-table17">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="dot" id="dot17"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="soldier-square17"><img class="soldier" id="soldier17" src="media1/soldier@0.5x.png">
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>646</span>
+                        <span>645</span>
+                        <span>644</span>
+                        <span>643</span>
+                        <span>642</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>215</span>
+                        <span>214</span>
+                        <span>213</span>
+                        <span>212</span>
+                        <span>211</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn17"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn17"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide18">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl18">
+            מדידת אזימוט חוזר - דרך ראשונה
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p18">
+            אזימוט חוזר ימדד מהמטרה לנווט (איך המטרה "רואה" אותי).
+            בדוגמא האזימוט החוזר הוא 140&deg;.
+        </p>
+        <p class="animate__animated animate__fadeInRight first-p bold"> את האזימוט החוזר רואים במעגל הפנימי (הירוק).
+        </p>
+
+        <img class="content-img" id="content-img18" src="media1/img1.jpeg" />
+        <div class="content-div" id="content-div18">
+            <div class="img-div" id="img-div18">
+                <div class="coords" id="coords18">
+                    <img class="coordinate-meter" id="coordinate-meter18" src="media1/coordinateMeterIn.png">
+                    <img class="string" id="string18" src="media1/string.png" />
+                    <table class="content-table" id="content-table18">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="dot" id="dot18"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="soldier-square18"><img class="soldier" id="soldier18" src="media1/soldier@0.5x.png">
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>646</span>
+                        <span>645</span>
+                        <span>644</span>
+                        <span>643</span>
+                        <span>642</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>215</span>
+                        <span>214</span>
+                        <span>213</span>
+                        <span>212</span>
+                        <span>211</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn18"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn18"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide19">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl19">
+            מדידת אזימוט חוזר - דרך שנייה
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p19">
+            הדרך השנייה למדוד- למקם את המדקו על המטרה ולהסתכל על האזימוט היוצא.
+            בדוגמא האזימוט החוזר הוא 140&deg;.
+        </p>
+
+        <img class="content-img" id="content-img19" src="media1/img1.jpeg" />
+        <div class="content-div" id="content-div19">
+            <div class="img-div" id="img-div19">
+                <div class="coords" id="coords19">
+                    <img class="coordinate-meter" id="coordinate-meter19" src="media1/coordinateMeterOut2.png">
+                    <img class="string" id="string19" src="media1/string.png" />
+                    <table class="content-table" id="content-table19">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="dot" id="dot19"></div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td id="soldier-square19">
+                                <img class="soldier" id="soldier19" src="media1/soldier@0.5x.png">
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>646</span>
+                        <span>645</span>
+                        <span>644</span>
+                        <span>643</span>
+                        <span>642</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>215</span>
+                        <span>214</span>
+                        <span>213</span>
+                        <span>212</span>
+                        <span>211</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn19"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn19"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide20">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl20">
+            מציאת אזימוט באמצעות מצפן
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p20">
+            זהו המצפן הצבאי, שאיתו מודדים אזימוט בשטח וממש קל לשימוש.
+        </p>
+        <b style="margin: 0 0 1rem 0; animation-delay: 0.75s;"
+            class="animate__animated animate__fadeInRight centered-txt first-p">
+            לחצו על המצפן
+        </b>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p20-a">
+            במדידת אזימוט בשטח יש שני דגשים חשובים- לשמור על המצפן מקביל לקרקע ועל קו ראייה (עין-מנסרה-נימה אדומה-מטרה).
+        </p>
+
+        <div class="content-div" id="content-div20">
+            <div class="img-div" id="img-div20">
+                <img class="content-img" id="content-img20" src="media1/compassFull.png" />
+                <img id="content-img20-txt" src="media1/compassRotatedText.png" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn20"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn20"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide21">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl21">
+            הצפנת מפה
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p21">
+            בניווטים בעזרת מצפן, יש לכוון את המפה לכיוון הצפון לפי המצפן - צפון אל צפון.
+        </p>
+
+        <div class="content-div" id="content-div21">
+            <div class="animate__animated animate__rollIn" id="compass21">
+                <img id="compass-body21" src="media1/compass.png" />
+                <img id="compass-needle21" src="media1/needle.png" />
+            </div>
+            <div class="img-div" id="img-div21">
+                <img class="content-img" id="content-img21" src="media1/ground.png" />
+                <img id="map21" src="media1/map.jpg" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn21"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn21"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide22">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl22">
+            מדידת מרחק אווירי
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p22">
+            בשביל למדוד מרחק אווירי, יש סרגל בצד המדקו למפות ביחס 1:50,000.
+            <br />
+            לדוגמא, המרחק האווירי בין הנקודות במפה הוא 2.2 ק"מ.
+        </p>
+
+        <img class="content-img" id="content-img22" src="media1/img2.jpg" />
+        <div class="content-div" id="content-div22">
+            <div class="dot" id="dot22-b">
+                <img class="animate__animated animate__zoomInLeft coordinate-meter" id="coordinate-meter22"
+                    src="media1/coordinateMeter.jpeg">
+            </div>
+            <div class="img-div" id="img-div22">
+                <div class="coords" id="coords22">
+                    <table class="content-table" id="content-table22">
+                        <tr>
+                            <td>
+                                <div class="dot" id="dot22"></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="dot" id="dot22-a"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="ver-coord">
+                        <span>759</span>
+                        <span>758</span>
+                        <span>757</span>
+                        <span>756</span>
+                    </div>
+                    <div class="hor-coord">
+                        <span>250</span>
+                        <span>249</span>
+                        <span>248</span>
+                        <span>247</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn22"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn22"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide23">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl23">
+            מדידת מרחק אווירי של מסלול
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p23">
+            כמדובר במסלול שאינו קו ישר במקום לבצע כמה מדידות עם הסרגל אפשר לקחת חוט ולעבור איתו על המסלול, ולמדוד את
+            אורך קטע החוט עם הסרגל של המדקו או עם רשת הקואורדינטות.
+        </p>
+
+        <div class="content-div" id="content-div23">
+            <div class="img-div" id="img-div23">
+                <img class="content-img" id="content-img23" src="media1/airDistanceRoad.gif" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn23"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn23"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide24">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl24">
+            ההבדל בין מרחק אווירי למרחק בשטח
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p24">
+            המרחק האווירי יהיה תמיד קטן יותר מהמרחק שנעבור בהליכה באותה דרך.
+        </p>
+
+        <div class="content-div" id="content-div24">
+            <div class="img-div" id="img-div24">
+                <img class="content-img" id="content-img24" src="media1/distance.png" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn24"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn24"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Slides chapter-3 /////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide25">
+        <div class="intro">
+            ברוכים הבאים לפרק סוגי מפות. <br />
+            יש מגוון רחב של מפות שמיועדות לשימושים שונים. <br /><br />
+            בפרק זה נתמקד על ארבעה סוגים של מפות ושימושיהן בניווט:
+            <ul>
+                <li> מפה לבנה </li>
+                <li> מפת תצ"א </li>
+                <li> מפת אורטופוטו </li>
+                <li> מפת קוד / שליטה </li>
+            </ul>
+            <div class="mov-btns">
+                <div class="nxt-btn" id="nxt-btn25"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide26">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl26">
+            מפה לבנה
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p26">
+            מפה הכוללת נתוני תבליט, תכסית ורשת הקואורדינטות.
+            המפה מיועדת לניווטים בשטח, משום שרואים את התבליט בה בצורה הטובה ביותר משום שרקע המפה לבן.
+        </p>
+
+        <div class="content-div" id="content-div26">
+            <div class="img-div" id="img-div26">
+                <img class="content-img" id="content-img26" src="media1/white.jpg" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn26"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn26"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide27">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl27">
+            מפת תצ"א
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p27">
+            ראשי תיבות של תצלום אווירי, מציגה בברור את התכסית אך התבליט אינו ברור- אי אפשר להעריך הבדלי גבהים.
+        </p>
+
+        <div class="content-div" id="content-div27">
+            <div class="img-div" id="img-div27">
+                <img class="content-img" id="content-img27" src="media1/aerialPhoto.jpg" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn27"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn27"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide28">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl28">
+            מפת אורטופוטו
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p28">
+            מפת תצ"א שעליה "הולבשו" הנתונים של מפה לבנה (תבליט, תכסית ורשת הקואורדינטות).
+        </p>
+
+        <div class="content-div" id="content-div28">
+            <div class="img-div" id="img-div28">
+                <img class="content-img" id="content-img28" src="media1/orthophoto.png" />
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn28"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn28"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide29">
+        <h5 class="animate__animated animate__fadeInRight first-ttl first-p" id="first-ttl29">
+            מפת קוד / שליטה
+        </h5>
+        <p class="animate__animated animate__fadeInRight first-p" id="first-p29">
+            יעלה הסבר בקרוב, בתהליכי אישורי ב"מ.
+        </p>
+
+        <div class="content-div" id="content-div29">
+            <div class="img-div" id="img-div29">
+                <!-- <img class="content-img" id="content-img29" src="media1/distanvce.png" /> -->
+            </div>
+            <div class="mov-btns">
+                <div class="prv-btn" id="prv-btn29"> &Lt; </div>
+                <div class="nxt-btn" id="nxt-btn29"> &Gt; </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Chapters-end /////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="slide" id="slide30">
+        <div class="end-episode">
+            סיימת את החלק "קריאת מפה"
+            <br />
+            <p style="font-size: 1rem; margin: 1rem 0 0;">חזור למסך הבית לצפייה בפרקים הבאים.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

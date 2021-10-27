@@ -1,0 +1,144 @@
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-Regular.ttf");
+}
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-Bold.ttf");
+    font-weight: bold;
+}
+  
+* {
+    direction: rtl;
+    font-family: assistant;
+    user-select: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url('media/bg.png') center top no-repeat fixed;
+    background-size: cover;
+    color: rgb(63, 58, 58);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#nav {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1030;
+    padding: 0.5rem;
+    background-color: #f4c330;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+#logo {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.4rem;
+}
+
+#logo:hover {
+    animation: rubberBand 0.5s ease-in-out;
+}
+
+#logo > img {
+    height: 6rem;
+    filter: sepia(25%);
+}
+
+#container-collapsible {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 7.5rem 0 2.5rem;
+    color: whitesmoke;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#p-beginning {
+    width: 85vw;
+    text-align: right;
+    animation: jackInTheBox 1.2s ease-in-out;
+}
+
+.animate__zoomInDown {
+    animation-duration: 1s;
+}
+
+.collapsible {
+    position: relative;
+    width: 70vw;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.4s ease-in-out;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.collapsible:after {
+    /* content: url('media/soon.png'); */
+    content: '\203A';
+    /* margin-top: 0.3rem; */
+    float: left;
+    border: none;
+    /* font-size: 0.6rem; */
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+
+.collapsible > img {
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 1.75rem;
+    opacity: 0.9;
+}
+  
+.active:after {
+    transform: rotate(-90deg);
+    transition: 0.4s ease-in-out;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.content > a > div {
+    margin: 0.5rem 0;
+    width: 50vw;
+    padding: 0.7rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    color: whitesmoke;
+}
+
+.content > a {
+    text-decoration: none;
+}
