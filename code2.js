@@ -571,14 +571,14 @@ function showSlide20() {
         $(".tirgul-move").draggable({
             revert: function (is_valid_drop) {
                 if (!is_valid_drop) {
-                    $(this).addClass("animate__shakeY");
+                    $(this).addClass("animate__swing");
                     setTimeout(function () {
-                        $(".tirgul-move").removeClass("animate__shakeY");
+                        $(".tirgul-move").removeClass("animate__swing");
                     }, 510);
                     return true;
                 }
                 else {
-                    $(this).removeClass("animate__shakeY");
+                    $(this).removeClass("animate__swing");
                 }
             }
         });
