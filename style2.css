@@ -1,0 +1,608 @@
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-Regular.ttf");
+}
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-Bold.ttf");
+    font-weight: bold;
+}
+  
+* {
+    direction: rtl;
+    text-align: start;
+    font-family: assistant;
+    user-select: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+    position: fixed;
+    background: url('media/bg.png') center top no-repeat fixed;
+    background-size: cover;
+    color: rgb(63, 58, 58);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    top: 0;
+    z-index: 1030;
+    padding: 0 0 0 1rem;
+    background-color: #f4c330;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+#logo {
+    height: 3.5rem;
+    margin: 0.5rem;
+    filter: sepia(25%);
+}
+
+#logo:hover {
+    animation: rubberBand 0.5s ease-in-out;
+}
+
+#chapter-ttl {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#menu-close {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1030;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#menu-btn {
+    height: 2.8rem;
+    width: 2.8rem;
+    vertical-align: middle;
+    background-color: #303030;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.6%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-size: 75% 75%;
+    background-position: center center;
+    border-radius: 0.25rem;
+    transition: 0.4s ease-in-out;
+}
+
+.active {
+    background-color: #1b1b1b !important;
+}
+
+#content {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 4.5rem;
+    left: 1rem;
+    transition: 0.4s ease-in-out;
+}
+
+#menu {
+    padding: 0.5rem 1rem;
+    background-color: rgba(38, 60, 62, 0.8);
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.menu-active {
+    background-color: rgba(15, 23, 24, 0.8);
+}
+
+.menu-chapter-ttl {
+    border-top: 0.05rem solid whitesmoke;
+    border-bottom: 0.05rem solid whitesmoke;
+    font-size: 1.2rem;
+    transition: 0.4s ease-in-out;
+    padding: 0 0 0 1.5rem;
+}
+
+.menu-chapter-sub-ttl {
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: 0.4s ease-in-out;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.slide {
+    width: 100vw;
+    padding-top: 4.5rem;
+    height: inherit;
+    display: none;
+}
+
+.intro {
+    width: 75vw;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.centered-txt {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.first-p {
+    margin: 1rem 1rem;
+    color: whitesmoke;
+    animation-duration: 0.75s;
+}
+
+.content-div {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.img-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.content-img {
+    width: 100vw;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.pop-div {
+    display: none;
+    position: absolute;
+    padding: 0.5rem;
+    background-color: #4F9E9E;
+    width: 100%;
+    text-align: center;
+    z-index: 1029;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+    margin-top: 2rem;
+}
+
+.find-div {
+    position: absolute;
+    background-color: rgba(115, 163, 17, 0);
+    height: 12vw;
+    width: 12vw;
+}
+
+.mov-btns {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    z-index: 1030;
+}
+
+.prv-btn {
+    padding: 0.25rem 0.5rem;
+    background-color: rgb(63, 58, 58);
+    border-radius: 0.25rem;
+}
+
+.nxt-btn {
+    padding: 0.25rem 0.5rem;
+    background-color: rgb(63, 58, 58);
+    border-radius: 0.25rem;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#slide0 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    animation: bounceInDown 1s;
+}
+
+/* 1 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p1 {
+    animation-delay: 0.5s;
+}
+
+/* 2 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p2 {
+    animation-delay: 0.5s;
+}
+
+#content-img2 {
+    position: relative;
+    background: url('media2/kipot.png') center center;
+    background-size: cover;
+    width: 75vw;
+    height: 90vw;
+    margin-bottom: 2rem;
+}
+
+#find-div2-a {
+    top: 8vw;
+    right: 63vw;
+}
+
+#find-div2-b {
+    top: 38vw;
+    right: 3vw;
+}
+
+#find-div2-c {
+    top: 61vw;
+    right: 3vw;
+}
+
+/* 3 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p3 {
+    animation-delay: 0.5s;
+}
+
+/* 4 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p4 {
+    animation-delay: 0.5s;
+}
+
+#content-img4 {
+    position: relative;
+    background: url('media2/shluha.png') center center;
+    background-size: cover;
+    width: 95vw;
+    height: 60vw;
+    margin-bottom: 2rem;
+}
+
+#find-div4 {
+    top: 4vw;
+    right: 51vw;
+    width: 18vw;
+    height: 50vw;
+    transform: rotate(332deg);
+}
+
+/* 5 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p5 {
+    animation-delay: 0.5s;
+}
+
+/* 6 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p6 {
+    animation-delay: 0.5s;
+}
+
+#content-img6 {
+    position: relative;
+    background: url('media2/kipot.png') center center;
+    background-size: cover;
+    width: 75vw;
+    height: 90vw;
+    margin-bottom: 2rem;
+}
+
+#find-div6-a {
+    top: 0vw;
+    right: 50vw;
+}
+
+#find-div6-b {
+    top: 36vw;
+    right: 32vw;
+    width: 14vw;
+}
+
+#find-div6-c {
+    top: 36vw;
+    right: 50vw;
+    width: 14vw;
+}
+
+#find-div6-d {
+    top: 68vw;
+    right: 3vw;
+}
+
+
+/* 7 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p7 {
+    animation-delay: 0.5s;
+}
+
+/* 8 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p8 {
+    animation-delay: 0.5s;
+}
+
+#content-img8 {
+    position: relative;
+    background: url('media2/kipot.png') center center;
+    background-size: cover;
+    width: 75vw;
+    height: 90vw;
+    margin-bottom: 2rem;
+}
+
+#find-div8 {
+    top: 51vw;
+    right: 0vw;
+}
+
+#find-div8-bonus {
+    position: absolute;
+    background-color: rgba(17, 163, 139, 0);
+    height: 12vw;
+    width: 12vw;
+    top: 35vw;
+    right: 37vw;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(245, 245, 245, 0);
+}
+
+/* 9 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p9 {
+    animation-delay: 0.5s;
+}
+
+/* 10 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p10 {
+    animation-delay: 0.5s;
+}
+
+#content-img10 {
+    position: relative;
+    background: url('media2/kipot.png') center center;
+    background-size: cover;
+    width: 75vw;
+    height: 90vw;
+    margin-bottom: 2rem;
+}
+
+#find-div10-a {
+    top: 2vw;
+    right: 2vw;
+    width: 28vw;
+}
+
+#find-div10-b {
+    top: 18vw;
+    right: 1vw;
+    width: 30vw;
+    transform: rotate(22deg);
+}
+
+#find-div10-c {
+    top: 57vw;
+    right: 30vw;
+    width: 34vw;
+    transform: rotate(275deg);
+}
+
+
+#find-div10-d {
+    top: 57vw;
+    right: 9vw;
+    width: 34vw;
+    transform: rotate(-25deg);
+}
+
+/* 11 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p11 {
+    animation-delay: 0.5s;
+}
+
+/* 12 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p12 {
+    animation-delay: 0.5s;
+}
+
+/* 13 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p13 {
+    animation-delay: 0.5s;
+}
+
+/* 14 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p14 {
+    animation-delay: 0.5s;
+}
+
+#content-img14 {
+    width: unset;
+    height: 75%;
+    margin-bottom: 2rem;
+}
+
+
+/* 15 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p15 {
+    animation-delay: 0.5s;
+}
+
+#content-img15 {
+    width: unset;
+    height: 75%;
+    margin-bottom: 2rem;
+}
+
+/* 16 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p16 {
+    animation-delay: 0.5s;
+}
+
+#content-img16 {
+    width: 100vw;
+    height: unset;
+    margin-bottom: 2rem;
+}
+
+/* 17 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p17 {
+    animation-delay: 0.5s;
+}
+
+#content-img17 {
+    width: 100vw;
+    height: unset;
+    margin-bottom: 2rem;
+}
+
+/* 18 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p18 {
+    animation-delay: 0.5s;
+}
+
+#content-img18 {
+    width: 100vw;
+    height: unset;
+    margin-bottom: 2rem;
+}
+
+/* 19 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p19 {
+    animation-delay: 0.5s;
+}
+
+#content-img19 {
+    width: 100vw;
+    height: unset;
+    margin-bottom: 2rem;
+}
+
+/* 20 ///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+#img-div20 {
+    padding: 0.5rem 0 3rem;
+    margin: 0 0.5rem;
+}
+
+#pop-div20 {
+    top: 3rem;
+}
+
+#tirgul-table20 {
+    direction: ltr;
+    height: 100%;
+    width: 100%;
+}
+
+#tirgul-table20 > tbody > tr > td:last-child {
+    width: 60%;
+}
+
+#tirgul-table20 > tbody > tr > td {
+    padding: 0.5rem;
+}
+
+#tirgul-table20 > tbody > tr > td:first-child {
+    text-align: left;
+}
+
+.content-img-tirgul {
+    width: unset;
+    height: 0;
+    padding: 0.25rem 0;
+    z-index: 1029;
+}
+
+.tirgul-move {
+    animation-duration: 0.5s;
+}
+
+#drag20 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+#tap20 {
+    position: relative;
+    width: 10vw;
+    height: unset;
+    transform: rotateZ(320deg);
+    animation: tapThat 1.2s ease-in-out infinite;
+    animation-delay: 2.5s;
+    opacity: 0;
+    z-index: 1030;
+}
+
+@keyframes tapThat {
+    0% { transform: rotateZ(310deg); right: 0; top: 0vw; opacity: 0; }
+    5% { transform: rotateZ(310deg); right: 0; opacity: 1; }
+    20% { transform: rotateZ(285deg); }
+    60% { transform: rotateZ(265deg); right: -18vw; top: -1vw; }
+    100% { transform: rotateZ(265deg); right: -18vw; top: -1vw; opacity: 0; }
+}
+
+
+/* 21 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#slide21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-episode {
+    width: 75vw;
+    padding: 4rem 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+    animation: bounceInDown 1s;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}

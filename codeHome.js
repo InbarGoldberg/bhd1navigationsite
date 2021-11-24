@@ -23,19 +23,43 @@ $(function () {
     });
 
     $(".content > a").on("click", function () {
-        switch ($(this).index() + 1) {
+        switch ($(".content > a").index(this) + 1) {
             case 1:
                 sessionStorage.setItem("slideNum", 0);
                 break;
-
             case 2:
                 sessionStorage.setItem("slideNum", 9);
                 break;
-
             case 3:
                 sessionStorage.setItem("slideNum", 26);
                 break;
-
+            case 4:
+                sessionStorage.setItem("slideNum", 0);
+                break;
+            case 5:
+                sessionStorage.setItem("slideNum", 1);
+                break;
+            case 6:
+                sessionStorage.setItem("slideNum", 3);
+                break;
+            case 7:
+                sessionStorage.setItem("slideNum", 5);
+                break;
+            case 8:
+                sessionStorage.setItem("slideNum", 7);
+                break;
+            case 9:
+                sessionStorage.setItem("slideNum", 9);
+                break;
+            case 10:
+                sessionStorage.setItem("slideNum", 11);
+                break;
+            case 11:
+                sessionStorage.setItem("slideNum", 13);
+                break;
+            case 12:
+                sessionStorage.setItem("slideNum", 15);
+                break;
             default:
                 break;
         }
