@@ -542,7 +542,7 @@ var nDrag, nDropCount = 0, elDrop, sDrag, nDragTop, aDragOffsetTop = [];
 function showSlide20() {
     $("#chapter-ttl").text("תרגול");
     $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-    $(".menu-chapter-sub-ttl:eq(3)").addClass("menu-active");
+    $(".menu-chapter-sub-ttl:eq(4)").addClass("menu-active");
 
     $("#img-div" + nSlide).css({ height: ($("body").height() - document.getElementById("img-div" + nSlide).getBoundingClientRect().top - 10) });
     $("#content-div" + nSlide).css({ height: ($("body").height() - document.getElementById("content-div" + nSlide).getBoundingClientRect().top) });
