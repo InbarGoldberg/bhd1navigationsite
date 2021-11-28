@@ -226,9 +226,9 @@ function showSlide2() {
 
 function findDivs() {
     nFindCount++;
-    $(this).animate({ backgroundColor: "rgba(115, 163, 17, 0.35)" }, 500);
+    $(this).off().animate({ backgroundColor: "rgba(115, 163, 17, 0.35)" }, 500);
     if (nFindCount === nFindTotal) {
-        $("#content-img" + nSlide + " > .find-div").off();
+        // $("#content-img" + nSlide + " > .find-div").off();
         aDone[nSlide] = 0;
         $("#pop-div" + nSlide).css({ top: "8rem" }).delay(200).show("fade", 500);
         $("#nxt-btn" + nSlide).delay(250).show("fade").on("click", nxtSlide);
