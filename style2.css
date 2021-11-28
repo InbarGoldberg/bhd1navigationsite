@@ -441,6 +441,20 @@ body {
     animation-delay: 0.5s;
 }
 
+#content-img12 {
+    position: relative;
+    background: url('media2/kipaSmuya.png') center center;
+    background-size: cover;
+    width: 75vw;
+    height: 90vw;
+    margin-bottom: 2rem;
+}
+
+#find-div12 {
+    top: 32vw;
+    right: 46vw;
+}
+
 /* 13 ///////////////////////////////////////////////////////////////////////////////////////////////// */
 
 #first-p13 {
@@ -542,12 +556,21 @@ body {
     width: 60%;
 }
 
+#tirgul-table20 > tbody > tr {
+    direction: ltr;
+}
+
 #tirgul-table20 > tbody > tr > td {
+    direction: ltr;
     padding: 0.5rem;
 }
 
 #tirgul-table20 > tbody > tr > td:first-child {
     text-align: left;
+}
+
+#tirgul-table20 > tbody > tr > td:last-child {
+    text-align: right;
 }
 
 .content-img-tirgul {
