@@ -564,10 +564,6 @@ function showSlide20() {
             $(this).css({ zIndex: "1030" });
         });
 
-        $(".tirgul-move").on("dragstop", function () {
-            $(this).css({ zIndex: "1027" });
-        });
-
         $(".tirgul-move").draggable({
             revert: function (is_valid_drop) {
                 if (!is_valid_drop) {
