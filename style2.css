@@ -378,6 +378,7 @@ body {
     text-align: center;
     font-size: 0.9rem;
     color: rgba(245, 245, 245, 0);
+    text-shadow: none !important;
 }
 
 /* 9 ///////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -547,7 +548,7 @@ body {
 }
 
 #tirgul-table20 {
-    direction: ltr;
+    direction: ltr !important;
     height: 100%;
     width: 100%;
 }
@@ -556,12 +557,16 @@ body {
     width: 60%;
 }
 
+#tirgul-table20 > tbody {
+    direction: ltr !important;
+}
+
 #tirgul-table20 > tbody > tr {
-    direction: ltr;
+    direction: ltr !important;
 }
 
 #tirgul-table20 > tbody > tr > td {
-    direction: ltr;
+    direction: ltr !important;
     padding: 0.5rem;
 }
 

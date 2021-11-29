@@ -7,8 +7,8 @@ $(function () {
     $("#logo").on("click", function () {
         sessionStorage.removeItem("slideNum");
     })
-    if (sessionStorage.getItem("slideNum") !== 0) {
-        nSlide = Number(sessionStorage.getItem("slideNum"));
+    nSlide = Number(sessionStorage.getItem("slideNum"));
+    if (nSlide !== 0) {
         $("#slide0").hide();
         if (nSlide >= 1 && nSlide <= 2) {
             $("#chapter-ttl").text("כיפה");
@@ -224,7 +224,7 @@ function showSlide2() {
 
 function findDivs() {
     nFindCount++;
-    $(this).off().animate({ backgroundColor: "rgba(115, 163, 17, 0.35)" }, 500);
+    $(this).off().animate({ backgroundColor: "rgba(115, 163, 17, 0.5)" }, 500);
     if (nFindCount === nFindTotal) {
         // $("#content-img" + nSlide + " > .find-div").off();
         aDone[nSlide] = 0;
@@ -349,8 +349,7 @@ function showSlide8() {
         if (aStart[8] !== 0) {
             $("#content-img8 > .find-div").on("click", findDivs);
             $("#find-div8-bonus").on("click", function () {
-                $(this).off().animate({ backgroundColor: "rgba(17, 163, 139, 0.35)", color: "whitesmoke" }, 500);
-
+                $(this).off().animate({ backgroundColor: "rgba(17, 163, 139, 0.5)", color: "whitesmoke" }, 500);
             });
             aStart[8] = 0;
         }
