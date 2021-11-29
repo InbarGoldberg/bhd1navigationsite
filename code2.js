@@ -229,7 +229,7 @@ function findDivs() {
         // $("#content-img" + nSlide + " > .find-div").off();
         aDone[nSlide] = 0;
         $("#pop-div" + nSlide).css({ top: "8rem" }).delay(200).show("fade", 500);
-        $("#nxt-btn" + nSlide).delay(250).show("fade").on("click", nxtSlide);
+        $("#nxt-btn" + nSlide).delay(250).show("fade");
     }
 }
 
