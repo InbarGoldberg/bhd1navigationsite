@@ -31,7 +31,7 @@ $(function () {
                 sessionStorage.setItem("slideNum", 9);
                 break;
             case 3:
-                sessionStorage.setItem("slideNum", 26);
+                sessionStorage.setItem("slideNum", 25);
                 break;
             case 4:
                 sessionStorage.setItem("slideNum", 0);
