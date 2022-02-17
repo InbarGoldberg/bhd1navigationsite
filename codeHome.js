@@ -85,6 +85,9 @@ $(function () {
             case 19:
                 sessionStorage.setItem("slideNum", 6);
                 break;
+            case 20:
+                sessionStorage.setItem("slideNum", 7);
+                break;
             default:
                 break;
         }
