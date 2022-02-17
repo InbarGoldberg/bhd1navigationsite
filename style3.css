@@ -1,0 +1,326 @@
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-Regular.ttf");
+}
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: assistant;
+    src: url("fonts/Assistant-Bold.ttf");
+    font-weight: bold;
+}
+  
+* {
+    direction: rtl;
+    text-align: start;
+    font-family: assistant;
+    user-select: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+    position: fixed;
+    background: url('media/bg.png') center top no-repeat fixed;
+    background-size: cover;
+    color: rgb(63, 58, 58);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    top: 0;
+    z-index: 1030;
+    padding: 0 0 0 1rem;
+    background-color: #f4c330;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+#logo {
+    height: 3.5rem;
+    margin: 0.5rem;
+    filter: sepia(25%);
+}
+
+#logo:hover {
+    animation: rubberBand 0.5s ease-in-out;
+}
+
+#chapter-ttl {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#menu-close {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1030;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#menu-btn {
+    height: 2.8rem;
+    width: 2.8rem;
+    vertical-align: middle;
+    background-color: #303030;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.6%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-size: 75% 75%;
+    background-position: center center;
+    border-radius: 0.25rem;
+    transition: 0.4s ease-in-out;
+}
+
+.active {
+    background-color: #1b1b1b !important;
+}
+
+#content {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 4.5rem;
+    left: 1rem;
+    transition: 0.4s ease-in-out;
+}
+
+#menu {
+    padding: 0.5rem 1rem;
+    background-color: rgba(38, 60, 62, 0.8);
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.menu-active {
+    background-color: rgba(15, 23, 24, 0.8);
+}
+
+.menu-chapter-ttl {
+    border-top: 0.05rem solid whitesmoke;
+    border-bottom: 0.05rem solid whitesmoke;
+    font-size: 1.2rem;
+    transition: 0.4s ease-in-out;
+    padding: 0 0 0 1.5rem;
+}
+
+.menu-chapter-sub-ttl {
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: 0.4s ease-in-out;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.slide {
+    width: 100vw;
+    padding-top: 4.5rem;
+    height: inherit;
+    display: none;
+}
+
+.intro {
+    width: 75vw;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.centered-txt {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.first-p {
+    margin: 1rem 1rem;
+    color: whitesmoke;
+    animation-duration: 0.75s;
+}
+
+.content-div {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.img-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.content-img {
+    width: 90%;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pop-div {
+    display: none;
+    position: absolute;
+    padding: 0.5rem;
+    background-color: #4F9E9E;
+    width: 100%;
+    text-align: center;
+    z-index: 1029;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+    margin-top: 2rem;
+}
+
+.mov-btns {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    z-index: 1030;
+}
+
+.prv-btn {
+    padding: 0.25rem 0.5rem;
+    background-color: rgb(63, 58, 58);
+    border-radius: 0.25rem;
+}
+
+.nxt-btn {
+    padding: 0.25rem 0.5rem;
+    background-color: rgb(63, 58, 58);
+    border-radius: 0.25rem;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#slide0 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    animation: bounceInDown 1s;
+}
+
+/* 1 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p1 {
+    animation-delay: 0.5s;
+}
+
+/* 2 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p2 {
+    animation-delay: 0.5s;
+}
+
+/* 3 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p3 {
+    animation-delay: 0.5s;
+}
+
+/* 4 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p4 {
+    animation-delay: 0.5s;
+}
+
+/* 5 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p5 {
+    animation-delay: 0.5s;
+}
+
+/* 6 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p6 {
+    animation-delay: 0.5s;
+}
+
+/* 7 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p7 {
+    animation-delay: 0.5s;
+}
+
+.second-table {
+    width: 100%;
+}
+
+#second-table7 {
+    animation-delay: 0.5s;
+}
+
+.second-table > tbody > tr > td  {
+    padding: 0.5rem;
+    border: 0.05rem solid whitesmoke;
+    border-top: none;
+    text-align: center;
+}
+
+.second-table > tbody > tr > td:first-of-type {
+    border-right: none;
+}
+
+.second-table > tbody > tr > td:last-of-type {
+    border-left: none;
+}
+
+#content-img7 {
+    display: none;
+    width: unset;
+    max-height: 37vh;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* 8 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#first-p8 {
+    animation-delay: 0.5s;
+}
+
+/* 9 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#slide9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.end-episode {
+    width: 75vw;
+    padding: 4rem 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: whitesmoke;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+    animation: bounceInDown 1s;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}

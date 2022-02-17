@@ -10,83 +10,6 @@ $(function () {
     nSlide = Number(sessionStorage.getItem("slideNum"));
     if (nSlide !== 0) {
         $("#slide0").hide();
-        if (nSlide >= 1 && nSlide <= 2) {
-            $("#chapter-ttl").text("כיפה");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(1)").addClass("menu-active");
-        }
-
-        else if (nSlide >= 3 && nSlide <= 4) {
-            $("#chapter-ttl").text("שלוחה");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(2)").addClass("menu-active");
-        }
-
-        else if (nSlide >= 5 && nSlide <= 6) {
-            $("#chapter-ttl").text("כתף");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(3)").addClass("menu-active");
-        }
-
-        else if (nSlide >= 7 && nSlide <= 8) {
-            $("#chapter-ttl").text("אוכף");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(4)").addClass("menu-active");
-        }
-
-        else if (nSlide >= 9 && nSlide <= 10) {
-            $("#chapter-ttl").text("גיא");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(5)").addClass("menu-active");
-        }
-
-        else if (nSlide >= 11 && nSlide <= 12) {
-            $("#chapter-ttl").text("כיפה סמויה");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(6)").addClass("menu-active");
-        }
-
-        else if (nSlide >= 13 && nSlide <= 14) {
-            $("#chapter-ttl").text("מכתש");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(7)").addClass("menu-active");
-        }
-
-        else if (nSlide === 15) {
-            $("#chapter-ttl").text("מדרון");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(8)").addClass("menu-active");
-        }
-
-        else if (nSlide === 16) {
-            $("#chapter-ttl").text("מדרון קצוב");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(0)").addClass("menu-active");
-        }
-
-        else if (nSlide === 17) {
-            $("#chapter-ttl").text("מדרון קעור");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(1)").addClass("menu-active");
-        }
-
-        else if (nSlide === 18) {
-            $("#chapter-ttl").text("מדרון קמור");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(2)").addClass("menu-active");
-        }
-
-        else if (nSlide === 19) {
-            $("#chapter-ttl").text("מצוק");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(3)").addClass("menu-active");
-        }
-
-        else if (nSlide === 20) {
-            $("#chapter-ttl").text("תרגול");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(4)").addClass("menu-active");
-        }
 
         $(".mov-btns").css({ position: "fixed", bottom: "0", width: "100vw", fontSize: "1.5rem", justifyContent: "space-between" });
         $("#slide" + nSlide).show();
@@ -212,11 +135,10 @@ function showSlide2() {
 
     if (aDone[2] !== 0) {
         $("#nxt-btn" + nSlide).hide();
-        $("#content-img2 > .find-div").css({ backgroundColor: "rgba(115, 163, 17, 0)" });
+        $("#content-img2 > .find-div").css({ backgroundColor: "rgba(115, 163, 17, 0)" }).off().on("click", findDivs);
         nFindCount = 0;
         nFindTotal = 3;
         if (aStart[2] !== 0) {
-            $("#content-img2 > .find-div").on("click", findDivs);
             aStart[2] = 0;
         }
     }
@@ -304,11 +226,10 @@ function showSlide6() {
 
     if (aDone[6] !== 0) {
         $("#nxt-btn" + nSlide).hide();
-        $("#content-img6 > .find-div").css({ backgroundColor: "rgba(115, 163, 17, 0)" });
+        $("#content-img6 > .find-div").css({ backgroundColor: "rgba(115, 163, 17, 0)" }).off().on("click", findDivs);
         nFindCount = 0;
         nFindTotal = 4;
         if (aStart[6] !== 0) {
-            $("#content-img6 > .find-div").on("click", findDivs);
             aStart[6] = 0;
         }
     }
@@ -385,11 +306,10 @@ function showSlide10() {
 
     if (aDone[10] !== 0) {
         $("#nxt-btn" + nSlide).hide();
-        $("#content-img10 > .find-div").css({ backgroundColor: "rgba(115, 163, 17, 0)" });
+        $("#content-img10 > .find-div").css({ backgroundColor: "rgba(115, 163, 17, 0)" }).off().on("click", findDivs);
         nFindCount = 0;
         nFindTotal = 4;
         if (aStart[10] !== 0) {
-            $("#content-img10 > .find-div").on("click", findDivs);
             aStart[10] = 0;
         }
     }

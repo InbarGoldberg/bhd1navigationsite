@@ -1,4 +1,6 @@
 $(function () {
+
+    // shrinks/expands the logo
     var c = 0;
     window.onscroll = function () {
         if (document.documentElement.scrollTop > 0 && c === 0) {
@@ -11,6 +13,7 @@ $(function () {
         }
     };
 
+    // open/close the colapsible.
     $(".collapsible").on("click", function () {
         this.classList.toggle("active");
         var content = this.nextElementSibling;
@@ -22,6 +25,7 @@ $(function () {
         }
     });
 
+    // save to sessionStorage to which page to go in the chapter
     $(".content > a").on("click", function () {
         switch ($(".content > a").index(this) + 1) {
             case 1:
@@ -59,6 +63,27 @@ $(function () {
                 break;
             case 12:
                 sessionStorage.setItem("slideNum", 15);
+                break;
+            case 13:
+                sessionStorage.setItem("slideNum", 0);
+                break;
+            case 14:
+                sessionStorage.setItem("slideNum", 1);
+                break;
+            case 15:
+                sessionStorage.setItem("slideNum", 2);
+                break;
+            case 16:
+                sessionStorage.setItem("slideNum", 3);
+                break;
+            case 17:
+                sessionStorage.setItem("slideNum", 4);
+                break;
+            case 18:
+                sessionStorage.setItem("slideNum", 5);
+                break;
+            case 19:
+                sessionStorage.setItem("slideNum", 6);
                 break;
             default:
                 break;

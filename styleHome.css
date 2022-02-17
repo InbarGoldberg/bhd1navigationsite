@@ -100,12 +100,9 @@ body {
 }
 
 .collapsible:after {
-    /* content: url('media/soon.png'); */
     content: '\203A';
-    /* margin-top: 0.3rem; */
     float: left;
     border: none;
-    /* font-size: 0.6rem; */
     color: whitesmoke;
     text-decoration: none;
     transition: 0.4s ease-in-out;

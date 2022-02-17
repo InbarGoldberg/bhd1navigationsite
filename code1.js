@@ -3,41 +3,22 @@ var nSlide = 0;
 var content;
 
 $(function () {
+
+    //hides all the intros because the animation of those slides cancels the display none.
     $("#slide9").hide();
     $("#slide25").hide();
     $("#slide30").hide();
     $("#logo").on("click", function () {
         sessionStorage.removeItem("slideNum");
     })
-    if (sessionStorage.getItem("slideNum") !== 0) {
-        nSlide = Number(sessionStorage.getItem("slideNum"));
+    nSlide = Number(sessionStorage.getItem("slideNum"));
+    if (nSlide !== 0) {
         $("#slide0").hide();
+        // if there are more than two slides with the same title so in case of refresh it will fix the title.
         if (nSlide >= 1 && nSlide <= 4) {
             $("#chapter-ttl").text("רשת הקואורדינטות");
             $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
             $(".menu-chapter-sub-ttl:eq(0)").addClass("menu-active");
-        }
-        if (nSlide >= 5 && nSlide <= 6) {
-            $("#chapter-ttl").text("תבליט");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(1)").addClass("menu-active");
-        }
-        if (nSlide >= 7 && nSlide <= 8) {
-            $("#chapter-ttl").text("תכסית");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(2)").addClass("menu-active");
-        }
-
-        if (nSlide === 9) {
-            $("#chapter-ttl").text("מד הקואורדינטות");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(2)").addClass("menu-active");
-        }
-
-        if (nSlide === 10) {
-            $("#chapter-ttl").text("הכרת מד הקואורדינטות");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(3)").addClass("menu-active");
         }
 
         if (nSlide >= 11 && nSlide <= 14) {
@@ -58,36 +39,6 @@ $(function () {
             $(".menu-chapter-sub-ttl:eq(6)").addClass("menu-active");
         }
 
-        if (nSlide === 25) {
-            $("#chapter-ttl").text("סוגי מפות");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-ttl:eq(2)").addClass("menu-active");
-        }
-
-        if (nSlide === 26) {
-            $("#chapter-ttl").text("מפה לבנה");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(7)").addClass("menu-active");
-        }
-
-        if (nSlide === 27) {
-            $("#chapter-ttl").text('מפת תצ"א');
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(8)").addClass("menu-active");
-        }
-
-        if (nSlide === 28) {
-            $("#chapter-ttl").text("מפת אורטופוטו");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(9)").addClass("menu-active");
-        }
-
-        if (nSlide === 29) {
-            $("#chapter-ttl").text("מפת קוד / שליטה");
-            $(".menu-chapter-ttl, .menu-chapter-sub-ttl").removeClass("menu-active");
-            $(".menu-chapter-sub-ttl:eq(10)").addClass("menu-active");
-        }
-
         $(".mov-btns").css({ position: "fixed", bottom: "0", width: "100vw", fontSize: "1.5rem", justifyContent: "space-between" });
         $("#slide" + nSlide).show();
         eval("showSlide" + nSlide + "()");
@@ -97,6 +48,7 @@ $(function () {
         showSlide0();
     }
 
+    //open/close the menu.
     $("#menu-btn").on("click", function () {
         this.classList.toggle("active");
         content = this.nextElementSibling;
@@ -298,6 +250,7 @@ function showSlide6() {
         }, 850);
         $("#second-table6 > tbody > tr > td").on("click", showTerms6);
     }
+    $("#img-div" + nSlide).css({ height: ($("body").height() - document.getElementById("img-div" + nSlide).getBoundingClientRect().top - 10) });
     $("#content-div" + nSlide).css({ height: ($("body").height() - document.getElementById("content-div" + nSlide).getBoundingClientRect().top) });
     $("#prv-btn" + nSlide).on("click", prvSlide);
     $("#nxt-btn" + nSlide).on("click", nxtSlide);
